@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(cors({ origin: ['https://ganoflow.com'], credentials: true }));
+app.use(cors());
 app.use('/webhook', bodyParser.raw({ type: 'application/json' }));
 app.use(express.json());
 
